@@ -72,7 +72,7 @@ nodemon src/index.js
 {
   "username": "testuser",
   "password": "testpassword",
-  "email": "testemail@gmail.com" 
+  "email": "testemail@gmail.com", 
   "phoneNumber": "0753521146"
 }
 ```
