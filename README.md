@@ -8,7 +8,7 @@ This is a simple REST API project built with Node.js, Express, MongoDB and Mongo
 
 ## Features
 
-- User registration and login (no authentication required)
+- User registration and login (no authentication)
 - CRUD operations for Product model
 - Layered architecture (Controller, Service, Repository, Model)
 - Error handling and ObjectId validation
