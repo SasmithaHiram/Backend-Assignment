@@ -46,7 +46,6 @@ Create a `.env` file in the root directory:
 
 ```env
 PORT=5000
-MONGO_URI=mongodb://localhost:27017/addyourdbname
 ```
 
 Make sure MongoDB is running locally.
@@ -54,13 +53,7 @@ Make sure MongoDB is running locally.
 ### 4️⃣ Run the project
 
 ```bash
-npm run dev
-```
-
-Or
-
-```bash
-nodemon src/app.js
+nodemon src/index.js
 ```
 
 ---
@@ -223,10 +216,3 @@ nodemon src/app.js
 {
   "message": "Product deleted successfully"
 }
-```
-
----
-
-## Author
-
-Sasmitha Hiram
