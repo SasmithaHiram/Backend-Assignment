@@ -45,7 +45,7 @@ npm install
 Create a `.env` file in the root directory:
 
 ```env
-PORT=5000
+PORT=3000
 ```
 
 Make sure MongoDB is running locally.
@@ -72,6 +72,7 @@ nodemon src/index.js
 {
   "username": "testuser",
   "password": "testpassword",
+  "email": "testemail@gmail.com" 
   "phoneNumber": "0753521146"
 }
 ```
