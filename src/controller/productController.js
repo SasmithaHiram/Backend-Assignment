@@ -1,9 +1,12 @@
 const productService = require("../service/productService");
+const mongoose = require("mongoose");
 
 exports.create = async (req, res) => {
   try {
     const product = productService.createProduct(req.body);
-    res.status(201).json(product);
+    res.status(201).json({
+      message: "Product created successfully",
+    });
   } catch (err) {
     res.status(400).json({ error: err.message });
   }
@@ -20,7 +23,11 @@ exports.getAll = async (req, res) => {
 
 exports.getById = async (req, res) => {
   try {
-    const product = await productService.getProductById(req.params.id);
+    const productId = req.params.id;
+    if (!mongoose.Types.ObjectId.isValid(productId)) {
+      return res.status(400).json({ error: "Invalid product Id format" });
+    }
+    const product = await productService.getProductById(productId);
     if (!product) return res.status(404).json({ message: "Product not found" });
     res.json(product);
   } catch (err) {

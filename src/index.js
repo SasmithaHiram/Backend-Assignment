@@ -6,11 +6,11 @@ const port = process.env.PORT;
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 app.use(bodyParser.json());
-const userRoutes = require("../src/routes/user.Routes");
-const productRoutes = require("../src/routes/product.Routes");
+const userRoutes = require("./routes/userRoutes");
+const productRoutes = require("./routes/productRoutes");
 
-app.use("/api/users", userRoutes);
-app.use("/api/prodcuts", productRoutes);
+app.use("/api/user", userRoutes);
+app.use("/api/prodcut", productRoutes);
 
 app.listen(port, () => {
   console.log(`Server running on port ${port}`);
