@@ -10,7 +10,7 @@ const userRoutes = require("./routes/userRoutes");
 const productRoutes = require("./routes/productRoutes");
 
 app.use("/api/user", userRoutes);
-app.use("/api/prodcut", productRoutes);
+app.use("/api/product", productRoutes);
 
 app.listen(port, () => {
   console.log(`Server running on port ${port}`);
