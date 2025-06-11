@@ -1,6 +1,6 @@
 const userService = require("../service/userService");
 
-exports.create = async (req, res) => {
+exports.register = async (req, res) => {
   try {
     const user = userService.registerUser(req.body);
     res.status(201).json(user);
