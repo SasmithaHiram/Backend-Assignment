@@ -3,9 +3,10 @@ const mongoose = require("mongoose");
 
 exports.create = async (req, res) => {
   try {
-    const product = productService.createProduct(req.body);
+    const product = await productService.createProduct(req.body);
     res.status(201).json({
       message: "Product created successfully",
+      product,
     });
   } catch (err) {
     res.status(400).json({ error: err.message });
